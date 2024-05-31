@@ -6,3 +6,15 @@
   align-content: center;
   justify-content: center;
 }
+
+.card-info-container {
+  display: flex;
+}
+
+.countries-list-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
