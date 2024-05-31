@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { CountriesList } from "@/components/CountriesList";
-import { PopUpMap } from "@/components/PopUpMap";
+import { DialogMap } from "@/components/DialogMap";
 import { SearchBar } from "@/components/SearchBar";
 
 import "./assets/main.css";
@@ -11,7 +11,7 @@ import "./assets/main.css";
     <SearchBar />
     <CountriesList />
   </main>
-  <PopUpMap />
+  <DialogMap />
 </template>
 
 <style scoped></style>

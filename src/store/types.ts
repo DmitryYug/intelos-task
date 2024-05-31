@@ -11,5 +11,5 @@ export type TCountry = {
     png: string;
     alt: string;
   };
+  latlng: [number, number];
 };
-export type TReadonlyCountry = Readonly<TCountry>;

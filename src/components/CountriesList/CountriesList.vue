@@ -1,5 +1,5 @@
 <script lang="ts">
-import { useVModel } from "effector-vue/composition";
+import { useStore } from "effector-vue/composition";
 
 import { CountryCard } from "@/components/CountryCard";
 import { getCountriesListFx } from "@/store/events";
@@ -11,8 +11,8 @@ export default {
     getCountriesListFx();
   },
   setup() {
-    const countriesList = useVModel($countriesList);
-    const countriesListLoading = useVModel($countriesListLoading);
+    const countriesList = useStore($countriesList);
+    const countriesListLoading = useStore($countriesListLoading);
 
     return {
       countriesList,

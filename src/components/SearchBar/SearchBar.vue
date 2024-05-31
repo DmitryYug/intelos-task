@@ -22,11 +22,20 @@ export default {
 <template>
   <v-autocomplete
     v-model="searchValue"
-    label="Autocomplete"
+    label="Search for a country"
     :items="countriesList || []"
     item-title="name.official"
     clearable
+    outlined
     width="500"
     :disabled="countriesListLoading"
-  />
+  >
+    <!--    <template v-slot:item="{ props, item }">-->
+    <!--      <v-list-item-->
+    <!--        v-bind="props"-->
+    <!--        :prepend-avatar="item.raw.flags.png"-->
+    <!--        :title="item.raw.name.official"-->
+    <!--      />-->
+    <!--    </template>-->
+  </v-autocomplete>
 </template>

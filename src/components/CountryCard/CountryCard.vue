@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { noDataMessage } from "@/constants/constants";
+import { setSelectedCountry } from "@/store/events";
 import type { TCountry, TCurrency } from "@/store/types";
 
 defineProps<{ country: TCountry }>();
@@ -19,6 +20,7 @@ const getCurrencySubtitle = (currObj: TCurrency) => {
     hover
     :title="country.name?.official || noDataMessage"
     :append-avatar="country.flags.png"
+    @click="setSelectedCountry(country)"
   >
     <v-card-item>
       <v-card-text>

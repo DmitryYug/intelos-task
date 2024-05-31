@@ -8,6 +8,7 @@ import "vuetify/styles";
 import App from "./App.vue";
 
 import "./assets/reset.css";
+
 const vuetify = createVuetify({
   components,
   directives,
