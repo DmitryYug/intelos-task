@@ -3,14 +3,16 @@ import { onMounted } from "vue";
 import { useStore } from "effector-vue/composition";
 
 import { getCountriesListFx } from "@/store/events";
-import { $appStore } from "@/store/store";
+import { $countriesList, $countriesListLoading } from "@/store/store";
 
 onMounted(() => getCountriesListFx());
-const store = useStore($appStore);
+const countriesList = useStore($countriesList);
+const countriesListLoading = useStore($countriesListLoading);
+console.log(countriesList);
 </script>
 
 <template>
-  <div>{{ JSON.stringify(store.countriesList) }}</div>
+  <div>{{ JSON.stringify(countriesList) }}</div>
 </template>
 
 <style scoped></style>
