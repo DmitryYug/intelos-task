@@ -1,4 +1,4 @@
-type TDebounceFn = (arg: string) => void;
+type TDebounceFn = (arg: string) => any;
 
 export const debounce = (func: TDebounceFn, delay: number): TDebounceFn => {
   let timeoutId: number | null = null;

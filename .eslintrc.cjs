@@ -8,11 +8,12 @@ module.exports = {
     "plugin:vue/vue3-essential",
     "@vue/eslint-config-typescript",
     "@vue/eslint-config-prettier/skip-formatting",
+    "plugin:effector/recommended"
   ],
   parserOptions: {
     ecmaVersion: "latest",
   },
-  plugins: ["@typescript-eslint", "simple-import-sort", "import", "unused-imports", "prettier"],
+  plugins: ["@typescript-eslint", "simple-import-sort", "import", "unused-imports", "prettier", "effector"],
   rules: {
     'vue/multi-word-component-names': 'off',
     "prettier/prettier": [

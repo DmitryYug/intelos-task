@@ -1,9 +1,14 @@
 <script setup lang="ts">
-import { noDataMessage } from "@/constants/constants";
+import { useStore } from "effector-vue/composition";
+
+import { countryCardWidth, noDataMessage } from "@/constants/constants";
 import { setSelectedCountry } from "@/store/events";
+import { $filteredCountriesListLoading } from "@/store/store";
 import type { TCountry, TCurrency } from "@/store/types";
 
 defineProps<{ country: TCountry }>();
+
+const filteredCountriesListLoading = useStore($filteredCountriesListLoading);
 
 const getCurrencySubtitle = (currObj: TCurrency) => {
   if (currObj && Object.keys(currObj).length) {
@@ -15,14 +20,15 @@ const getCurrencySubtitle = (currObj: TCurrency) => {
 
 <template>
   <v-card
-    class="mx-auto card"
-    width="400"
+    class="mx-auto"
     hover
-    :title="country.name?.official || noDataMessage"
-    :append-avatar="country.flags.png"
     @click="setSelectedCountry(country)"
+    :title="country.name?.official || noDataMessage"
+    :width="countryCardWidth"
+    :append-avatar="country.flags.png"
+    :disabled="filteredCountriesListLoading"
   >
-    <v-card-item>
+    <v-card-item class="pa-0">
       <v-card-text>
         <v-list
           lines="one"

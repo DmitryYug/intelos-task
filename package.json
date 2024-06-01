@@ -16,6 +16,7 @@
     "axios": "^1.7.2",
     "effector": "^23.1.0",
     "effector-vue": "^23.0.0",
+    "eslint-plugin-effector": "^0.14.0",
     "vue": "^3.4.21",
     "vue3-google-map": "^0.20.0",
     "vuetify": "^3.6.8"

@@ -13,3 +13,4 @@ export type TCountry = {
   };
   latlng: [number, number];
 };
+export type TReadonlyCountry = Readonly<TCountry>;
