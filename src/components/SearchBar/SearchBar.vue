@@ -11,6 +11,7 @@ import { debounce } from "@/utils/debounce";
 const countriesListLoading = useStore($countriesListLoading);
 const filteredCountriesListLoading = useStore($filteredCountriesListLoading);
 const searchValue = ref("");
+
 watch(
   searchValue,
   debounce((value: string) => {

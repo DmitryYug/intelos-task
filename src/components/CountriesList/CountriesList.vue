@@ -8,6 +8,7 @@ import { countryCardWidth } from "@/constants/constants";
 import { getCountriesListFx } from "@/store/events";
 import { $countriesList, $countriesListLoading, $filteredCountriesList, $noResults } from "@/store/store";
 
+// Getting initial full list of countries
 onMounted(() => {
   getCountriesListFx();
 });
@@ -16,6 +17,8 @@ const countriesList = useStore($countriesList);
 const filteredCountriesList = useStore($filteredCountriesList);
 const countriesListLoading = useStore($countriesListLoading);
 const noData = useStore($noResults);
+/* Checking if filteredCountriesList is present,
+ if not, using already loaded full countriesList to avoid API request */
 const currentCountriesList = computed(() => filteredCountriesList.value ?? countriesList.value);
 </script>
 
@@ -50,5 +53,3 @@ const currentCountriesList = computed(() => filteredCountriesList.value ?? count
     </div>
   </div>
 </template>
-
-<style scoped></style>

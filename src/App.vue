@@ -7,8 +7,8 @@ import { SearchBar } from "@/components/SearchBar";
 
 import "./assets/main.css";
 
+// Theme handler from vuetify
 const theme = useTheme();
-
 function toggleTheme() {
   theme.global.name.value = theme.global.current.value.dark ? "light" : "dark";
 }
@@ -30,5 +30,3 @@ function toggleTheme() {
     <DialogMap />
   </v-app>
 </template>
-
-<style scoped></style>

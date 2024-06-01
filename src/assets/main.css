@@ -9,10 +9,6 @@
   margin: 0 auto;
 }
 
-.card-info-container {
-  display: flex;
-}
-
 .countries-list-wrapper {
   display: flex;
   gap: 20px;

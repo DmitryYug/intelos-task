@@ -1,16 +1,19 @@
-export type TCurrency = Record<string, { name: string }>;
-export type TCountry = {
-  name: {
-    official: string;
+export type TCurrency = {
+  readonly [x: string]: {
+    readonly name: string;
   };
-  capital: string[];
-  population: number;
-  region: string;
-  currencies: TCurrency;
-  flags: {
-    png: string;
-    alt: string;
-  };
-  latlng: [number, number];
 };
-export type TReadonlyCountry = Readonly<TCountry>;
+export type TCountry = {
+  readonly name: {
+    readonly official: string;
+  };
+  readonly capital: ReadonlyArray<string>;
+  readonly population: number;
+  readonly region: string;
+  readonly currencies: TCurrency;
+  readonly flags: {
+    readonly png: string;
+    readonly alt: string;
+  };
+  readonly latlng: Readonly<[number, number]>;
+};

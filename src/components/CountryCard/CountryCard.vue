@@ -10,6 +10,7 @@ defineProps<{ country: TCountry }>();
 
 const filteredCountriesListLoading = useStore($filteredCountriesListLoading);
 
+// Concatenating the currency code and name if present
 const getCurrencySubtitle = (currObj: TCurrency) => {
   if (currObj && Object.keys(currObj).length) {
     return Object.keys(currObj).map(key => `${key}: ${currObj[key].name}`)[0];
@@ -32,7 +33,7 @@ const getCurrencySubtitle = (currObj: TCurrency) => {
       <v-card-text>
         <v-list
           lines="one"
-          class="card-info-container"
+          class="d-flex"
         >
           <div>
             <v-list-item
@@ -59,5 +60,3 @@ const getCurrencySubtitle = (currObj: TCurrency) => {
     </v-card-item>
   </v-card>
 </template>
-
-<style scoped></style>

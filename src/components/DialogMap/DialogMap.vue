@@ -48,11 +48,9 @@ const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
             variant="elevated"
             text="Close Dialog"
             @click="isActive.value = false"
-          ></v-btn>
+          />
         </v-card-actions>
       </v-card>
     </template>
   </v-dialog>
 </template>
-
-<style scoped></style>
