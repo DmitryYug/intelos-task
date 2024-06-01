@@ -1,39 +1,44 @@
-# intelos-task
+# Intelos-task
 
-This template should help get you started developing with Vue 3 in Vite.
+## Stack: 
+- TypeScript
+- Vue.js v3
+- Effector state manager
+- Vuitify
+- Axios
+- Google Maps API (key provided below)
+### Description
+- States that should be shared between components stored in global store and can be accessed from any component, without unnecessary prop drilling and rerendering.
+```xpath
+src/store/store.ts
+```
+- Events that make changes in the stores are stored in
+```xpath 
+src/store/events.ts  
+```
+- Countries API
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+https://restcountries.com/
 
 ## Project Setup
-
+### Install Dependencies
 ```sh
 npm install
 ```
 
+### Environment Variables 
+Replace <strong>.env.example</strong> with <strong>.env</strong> and add your Google Maps API key or the proveded key
+```text
+AIzaSyCrLsnCjQMSsSCMMUuica_NiUSExqbs5XA
+```
 ### Compile and Hot-Reload for Development
-
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+## Repo link
+https://github.com/DmitryYug/intelos-task
 
-```sh
-npm run build
-```
+## Deployment link
 
-### Lint with [ESLint](https://eslint.org/)
 
-```sh
-npm run lint
-```
